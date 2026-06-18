@@ -1,0 +1,15 @@
+version: "3.9"
+
+services:
+  retailiq-api:
+    build:
+      context: ..
+      dockerfile: deployment/Dockerfile
+    container_name: retailiq-api
+    ports:
+      - "8000:8000"
+    volumes:
+      - ../models:/app/models
+      - ../data:/app/data
+    environment:
+      - PYTHONUNBUFFERED=1
