@@ -1,5 +1,11 @@
 # RetailIQ: E-commerce Customer Churn Prediction Platform
 
+![Python](https://img.shields.io/badge/Python-3.10-blue)
+![FastAPI](https://img.shields.io/badge/FastAPI-Backend-green)
+![Machine Learning](https://img.shields.io/badge/ML-RandomForest-orange)
+![Status](https://img.shields.io/badge/Project-Industry%20Level-brightgreen)
+![Tests](https://img.shields.io/badge/Tests-Pytest-blue)
+
 RetailIQ is an industry-style machine learning project built to analyze e-commerce customer behavior and predict customer churn risk.
 
 The project includes a complete data science workflow: data loading, data cleaning, feature engineering, churn label creation, leakage-safe model training, model evaluation, customer segmentation, FastAPI backend, analytics API endpoints, and single-customer churn prediction.
@@ -685,6 +691,58 @@ Churn label creation
 Feature engineering logic
 Risk level mapping
 Business recommendation logic
+
+## Live Project Architecture
+
+This project follows a modular and production-style machine learning architecture.
+
+                ┌──────────────────────┐
+                │   Raw Dataset CSV     │
+                └─────────┬────────────┘
+                          ↓
+                ┌──────────────────────┐
+                │   Data Loader         │
+                └─────────┬────────────┘
+                          ↓
+                ┌──────────────────────┐
+                │   Data Cleaning       │
+                └─────────┬────────────┘
+                          ↓
+                ┌──────────────────────┐
+                │ Feature Engineering   │
+                └─────────┬────────────┘
+                          ↓
+                ┌──────────────────────┐
+                │  ML Model Training    │
+                │ (Random Forest / KNN) │
+                └─────────┬────────────┘
+                          ↓
+                ┌──────────────────────┐
+                │   Saved Model (.pkl)  │
+                └─────────┬────────────┘
+                          ↓
+        ┌────────────────────────────────────┐
+        │        FastAPI Backend             │
+        │  - Churn Prediction API           │
+        │  - Analytics API                  │
+        └──────────────┬─────────────────────┘
+                       ↓
+        ┌────────────────────────────────────┐
+        │   Dashboard / Frontend Layer       │
+        │  (Streamlit / React / Next.js)    │
+        └────────────────────────────────────┘
+
+        ## Project Highlights
+
+- End-to-end Machine Learning Pipeline
+- Real-world Churn Prediction System
+- Leakage-safe ML Model Training
+- Customer Segmentation (K-Means)
+- Production-ready FastAPI Backend
+- REST APIs for Dashboard Integration
+- Unit Testing with Pytest
+- CI/CD pipeline using GitHub Actions
+- Scalable project structure (industry standard)
 
 ## Author
 
